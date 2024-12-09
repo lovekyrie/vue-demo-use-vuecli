@@ -10,6 +10,10 @@ setInterval(() => {
   accessToken = 's_tk' + Math.random()
 }, 5000)
 
+router.get('/test', ctx => {
+  ctx.body = '你好，测不准'
+})
+
 /** 登录接口获取 */
 router.get('/login', async ctx => {
   const { name } = ctx.query
@@ -48,4 +52,5 @@ router.get('/getData', async ctx => {
   }
 })
 
+router.use('/user', router.routes(), router.allowedMethods())
 module.exports = router
