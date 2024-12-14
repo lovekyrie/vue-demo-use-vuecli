@@ -23,7 +23,7 @@
 import menus from './config/menus';
 import { MEUNS } from './config/constant';
 import { ref } from 'vue'
-import { useRouter } from '@/utils/vueUtils'
+import router from './router';
 
 const newMeuns = ref([])
 const meunsKeys = JSON.parse(localStorage.getItem(MEUNS))
@@ -31,7 +31,6 @@ menus.forEach(item => {
   if (item.key && meunsKeys.includes(item.key)) newMeuns.value.push(item)
 })
 
-const router = useRouter()
 const exit = () => {
   router.push('/login')
   // 清除动态路由缓存

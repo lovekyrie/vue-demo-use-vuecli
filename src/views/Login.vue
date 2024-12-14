@@ -14,12 +14,11 @@
 </template>
 <script setup>
 import { reactive } from 'vue';
-import { useRouter } from '@/utils/vueUtils';
 import API from '@/service/api';
 import { ACCESS_TOKEN, ROLE, MEUNS } from '@/config/constant';
 import manageRoute from '@/router/dynamicRoute';
+import router from '@/router';
 
-const router = useRouter()
 const user = reactive({
   name: '',
   password: ''
@@ -30,9 +29,11 @@ const submit = () => {
     localStorage.setItem(ACCESS_TOKEN, accessToken)
     localStorage.setItem(ROLE, role)
     localStorage.setItem(MEUNS, JSON.stringify(menus))
+    console.log('router before', router)
     if (role === 'admin') {
       router.addRoute('Layout', manageRoute)
     }
+    console.log('router after', router)
     router.push('/home')
   })
 }

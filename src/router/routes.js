@@ -1,4 +1,3 @@
-import VueRouter from 'vue-router'
 const Login = () => import(/* webpackChunkName: 'login'*/ '../views/Login.vue')
 const Home = () => import(/* webpackChunkName: 'home'*/ '../views/Home.vue')
 const About = () => import(/* webpackChunkName: 'about'*/ '../views/About.vue')
@@ -64,5 +63,4 @@ const routes = [
   },
 ]
 
-const router = new VueRouter({ routes })
-export default router
+export default routes
