@@ -1,3 +1,6 @@
 <template>
-  <div>这是一个说明页面</div>
+  <div class="about">
+    <div>这是一个说明页面</div>
+    <button type="button" v-has>管理员按钮</button>
+  </div>
 </template>

@@ -8,6 +8,9 @@ import './styles/index.css'
 import router from './router'
 import VueRouter from 'vue-router'
 
+import has from '@/directives/has'
+Vue.directive('has', has)
+
 Vue.use(ElementUI)
 Vue.use(VueRouter)
 Vue.config.productionTip = false
