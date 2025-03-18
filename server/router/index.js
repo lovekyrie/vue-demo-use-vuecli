@@ -20,12 +20,12 @@ router.get('/login', async ctx => {
   switch (name) {
     case 'admin':
       role = 'admin'
-      menus = ['home', 'about', 'manage']
+      menus = ['home', 'about', 'manage', 'slot']
       break
 
     default:
       role = 'visitor'
-      menus = ['home', 'about']
+      menus = ['home', 'about', 'slot']
       break
   }
   ctx.body = {

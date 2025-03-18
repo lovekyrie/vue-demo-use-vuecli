@@ -14,6 +14,11 @@ const menus = [
     key: 'manage',
     name: '管理页',
   },
+  {
+    path: '/slot',
+    key: 'slot',
+    name: '插槽页',
+  },
 ]
 
 export default menus

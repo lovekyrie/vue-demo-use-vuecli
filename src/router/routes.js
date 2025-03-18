@@ -59,6 +59,14 @@ const routes = [
         name: 'drag',
         component: () => import('../views/drag/index.vue'),
       },
+      {
+        path: '/slot',
+        name: 'slot',
+        component: () => import('../views/slot/index.vue'),
+        meta: {
+          btnPermissions: ['admin', 'visitor'],
+        },
+      },
     ],
   },
 ]
