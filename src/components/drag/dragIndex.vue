@@ -58,7 +58,8 @@ function handleDragOver(draggingNode, dropNode, ev) {
   console.log('tree drag over: ', dropNode.label);
 }
 function handleDragEnd(draggingNode, dropNode, dropType, ev) {
-  console.log('tree drag end: ', dropNode && dropNode.label, dropType);
+  console.log('tree drag end: ',draggingNode, dropNode && dropNode.label, dropType, ev);
+  console.log('dragging end data', tree.data)
 }
 function handleDrop(draggingNode, dropNode, dropType, ev) {
   if (draggingNode.parent !== dropNode.parent) return
