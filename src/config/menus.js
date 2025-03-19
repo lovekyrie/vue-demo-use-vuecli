@@ -19,6 +19,11 @@ const menus = [
     key: 'slot',
     name: '插槽页',
   },
+  {
+    path: '/scopeSlot',
+    key: 'scopeSlot',
+    name: '作用域插槽页',
+  },
 ]
 
 export default menus
