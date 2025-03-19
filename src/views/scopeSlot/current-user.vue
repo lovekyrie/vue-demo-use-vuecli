@@ -1,11 +1,14 @@
 <template>
   <span>
-    <slot v-bind:user="user">{{ user.lastName }}</slot>
+    <slot :user="user">{{ user.lastName }}</slot>
   </span>
 </template>
 
 <script>
 export default {
+  components: {
+
+  },
   data() {
     return {
       user: {
@@ -13,9 +16,6 @@ export default {
         lastName: 'durant'
       }
     }
-  },
-  components: {
-
   }
 }
 </script>

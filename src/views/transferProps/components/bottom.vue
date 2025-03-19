@@ -15,7 +15,7 @@
 </template>
 <script>
 export default {
-  name: 'bottomC',
+  name: 'BottomC',
   props: {
     gender: {
       type: String,

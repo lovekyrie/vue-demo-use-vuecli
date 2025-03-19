@@ -1,13 +1,13 @@
 <template>
   <base-layout>
-    <template v-slot:header>
+    <template #header>
       <h1>Here might be a page title</h1>
     </template>
 
     <p>A paragraph for the main content.</p>
     <p>And another one.</p>
 
-    <template v-slot:footer>
+    <template #footer>
       <p>Here's some contact info</p>
     </template>
   </base-layout>
@@ -16,13 +16,13 @@
 <script>
 import baseLayout from './base-layout.vue';
 export default {
+  components: {
+    baseLayout
+  },
   data() {
     return {
 
     }
-  },
-  components: {
-    baseLayout
   }
 }
 </script>

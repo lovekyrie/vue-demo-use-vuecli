@@ -1,8 +1,10 @@
 <template>
   <div>
     home页面
-    <i-checkbox v-model="aValue"></i-checkbox>
-    <button @click="submit">提交</button>
+    <i-checkbox v-model="aValue" />
+    <button @click="submit">
+      提交
+    </button>
   </div>
 </template>
 

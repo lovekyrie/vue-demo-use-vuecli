@@ -1,19 +1,21 @@
 <template>
   <current-user>
-    <template v-slot:default="slotProps">{{ slotProps.user.firstName }}</template>
+    <template #default="slotProps">
+      {{ slotProps.user.firstName }}
+    </template>
   </current-user>
 </template>
 
 <script>
 import currentUser from './current-user'
 export default {
+  components: {
+    currentUser
+  },
   data() {
     return {
 
     }
-  },
-  components: {
-    currentUser
   }
 }
 </script>

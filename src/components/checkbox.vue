@@ -1,7 +1,12 @@
 <template>
   <label>
     <span>
-      <input type="checkbox" :disabled="disabled" :checked="current" @change="change">
+      <input
+        type="checkbox"
+        :disabled="disabled"
+        :checked="current"
+        @change="change"
+      >
     </span>
   </label>
 </template>
@@ -55,6 +60,6 @@ function updateModel() {
 </script>
 <script>
 export default {
-  name: 'iCheckbox',
+  name: 'ICheckbox',
 }
 </script>

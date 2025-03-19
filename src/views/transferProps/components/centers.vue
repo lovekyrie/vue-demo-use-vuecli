@@ -1,14 +1,17 @@
 <template>
   <section>
     <div class="mt-10">
-      <bottom v-bind="$attrs" v-on="$listeners"></bottom>
+      <bottom
+        v-bind="$attrs"
+        v-on="$listeners"
+      />
     </div>
   </section>
 </template>
 <script>
 import bottom from './bottom.vue';
 export default {
-  name: 'centerC',
+  name: 'CenterC',
   components: { bottom },
   props: {
     name: {

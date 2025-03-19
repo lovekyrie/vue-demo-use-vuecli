@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <router-view />
+    <button @click="info.count++">
+      改变全局count{{ info.count }}
+    </button>
   </div>
 </template>
 <script>
@@ -8,6 +11,14 @@ import { ROLE } from './config/constant';
 import manageRoute from './router/dynamicRoute'
 export default {
   name: 'App',
+  provide() {
+    return {info: this.info}
+  },
+  data() {
+    return {
+      info: {count: 1} 
+    }
+  },
   watch: {
     $route: {
       async handler(newVal) {

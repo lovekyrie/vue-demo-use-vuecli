@@ -1,8 +1,17 @@
 <template>
   <div class="tabs">
-    <div v-for="(tab, index) in tabs" :key="tab.id" class="tab" @mouseenter="handleMouseEnter(tab, index)">
+    <div
+      v-for="(tab, index) in tabs"
+      :key="tab.id"
+      class="tab"
+      @mouseenter="handleMouseEnter(tab, index)"
+    >
       <span>{{ tab.name }}</span>
-      <el-dropdown v-if="tab.isHover" ref="dropdown" trigger="click">
+      <el-dropdown
+        v-if="tab.isHover"
+        ref="dropdown"
+        trigger="click"
+      >
         <span class="el-dropdown-link">
           下拉菜单<i class="el-icon-arrow-down el-icon--right" />
         </span>

@@ -18,13 +18,13 @@
 <script>
 import baseLayout from './base-layout.vue';
 export default {
+  components: {
+    baseLayout
+  },
   data() {
     return {
 
     }
-  },
-  components: {
-    baseLayout
   }
 }
 </script>

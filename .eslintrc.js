@@ -1,7 +1,6 @@
 module.exports = {
-  extends: ['plugin:vue/essential'],
+  extends: ['plugin:vue/recommended'],
   rules: {
     'vue/multi-word-component-names': 'off',
-    'vue/html-indent': ['error', 2]
   },
 }

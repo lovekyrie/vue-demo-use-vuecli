@@ -1,12 +1,20 @@
 <template>
-  <el-scrollbar style="height: 400px;" ref="scroll">
-    <div v-for="i in 5" :key="i" class="scroll-item" style="height: 100px;"></div>
+  <el-scrollbar
+    ref="scroll"
+    style="height: 400px;"
+  >
+    <div
+      v-for="i in 5"
+      :key="i"
+      class="scroll-item"
+      style="height: 100px;"
+    />
   </el-scrollbar>
 </template>
 
 <script>
 export default {
-  name: 'scrollEvent',
+  name: 'ScrollEvent',
   data() {
     return {
       el: ''

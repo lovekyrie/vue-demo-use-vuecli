@@ -1,28 +1,32 @@
 <template>
   <div class="container">
     <header>
-      <slot name="header"></slot>
+      <slot name="header" />
     </header>
 
     <main>
-      <slot></slot>
+      <slot />
     </main>
 
     <footer>
-      <slot name="footer"></slot>
+      <slot name="footer" />
     </footer>
   </div>
 </template>
 
 <script>
 export default {
+  components: {
+
+  },
+  inject: ['info'],
   data() {
     return {
 
     }
   },
-  components: {
-
+  activated() {
+    console.log(this.info.count)
   }
 }
 </script>

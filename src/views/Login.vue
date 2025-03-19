@@ -4,14 +4,28 @@
       XXXX管理系统
     </div>
     <div class="flex justify-center">
-      <el-form label-width="80px" :rules="rules" ref="form" :model="user" style="width: 460px;">
-        <el-form-item label="姓名：" prop="name">
+      <el-form
+        ref="form"
+        label-width="80px"
+        :rules="rules"
+        :model="user"
+        style="width: 460px;"
+      >
+        <el-form-item
+          label="姓名："
+          prop="name"
+        >
           <el-input v-model="user.name" />
         </el-form-item>
-        <el-form-item label="密码：" prop="password">
+        <el-form-item
+          label="密码："
+          prop="password"
+        >
           <el-input v-model="user.password" />
         </el-form-item>
-        <el-button @click="submit">提交</el-button>
+        <el-button @click="submit">
+          提交
+        </el-button>
       </el-form>
     </div>
   </div>

@@ -1,7 +1,7 @@
 <template>
   <top>
     <centers>
-      <bottom></bottom>
+      <bottom />
     </centers>
   </top>
 </template>

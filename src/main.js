@@ -7,6 +7,7 @@ import './styles/index.css'
 
 import router from './router'
 import VueRouter from 'vue-router'
+import store from './store'
 
 import has from '@/directives/has'
 Vue.directive('has', has)
@@ -18,4 +19,5 @@ Vue.config.productionTip = false
 new Vue({
   render: h => h(App),
   router,
+  store,
 }).$mount('#app')

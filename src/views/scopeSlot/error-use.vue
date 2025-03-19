@@ -11,13 +11,13 @@
 <script>
 import currentUser from './current-user'
 export default {
+  components: {
+    currentUser
+  },
   data() {
     return {
 
     }
-  },
-  components: {
-    currentUser
   }
 }
 </script>

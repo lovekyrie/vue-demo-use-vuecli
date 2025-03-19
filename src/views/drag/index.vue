@@ -1,8 +1,18 @@
 <template>
-  <el-tree :data="tree.data" node-key="id" default-expand-all @node-drag-start="handleDragStart"
-    @node-drag-enter="handleDragEnter" @node-drag-leave="handleDragLeave" @node-drag-over="handleDragOver"
-    @node-drag-end="handleDragEnd" @node-drop="handleDrop" draggable :allow-drop="allowDrop" :allow-drag="allowDrag">
-  </el-tree>
+  <el-tree
+    :data="tree.data"
+    node-key="id"
+    default-expand-all
+    draggable
+    :allow-drop="allowDrop"
+    :allow-drag="allowDrag"
+    @node-drag-start="handleDragStart"
+    @node-drag-enter="handleDragEnter"
+    @node-drag-leave="handleDragLeave"
+    @node-drag-over="handleDragOver"
+    @node-drag-end="handleDragEnd"
+    @node-drop="handleDrop"
+  />
 </template>
 
 <script setup>
