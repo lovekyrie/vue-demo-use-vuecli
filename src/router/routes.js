@@ -70,7 +70,7 @@ const routes = [
       {
         path: '/scopeSlot',
         name: 'scopeSlot',
-        component: () => import('../views/scopeSlot/de-construction-slot-prop.vue'),
+        component: () => import('../views/scopeSlot/index.vue'),
       },
     ],
   },

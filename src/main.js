@@ -8,6 +8,7 @@ import './styles/index.css'
 import router from './router'
 import VueRouter from 'vue-router'
 import store from './store'
+import uniqueVue from './utils/uniqueVue'
 
 import has from '@/directives/has'
 Vue.directive('has', has)
@@ -15,6 +16,8 @@ Vue.directive('has', has)
 Vue.use(ElementUI)
 Vue.use(VueRouter)
 Vue.config.productionTip = false
+
+Vue.prototype.$eventBus = uniqueVue
 
 new Vue({
   render: h => h(App),

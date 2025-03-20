@@ -1,9 +1,12 @@
 <template>
-  <current-user>
-    <template #default="slotProps">
-      {{ slotProps.user.firstName }}
-    </template>
-  </current-user>
+  <div>
+    <current-user>
+      <template #default="slotProps">
+        {{ slotProps.user.firstName }}
+      </template>
+    </current-user>
+    <p>{{ count }}</p>
+  </div>
 </template>
 
 <script>
@@ -14,8 +17,11 @@ export default {
   },
   data() {
     return {
-
+      count: 0
     }
+  },
+  activated() {
+    this.$eventBus.$on('count', c=> this.count = c)
   }
 }
 </script>

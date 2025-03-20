@@ -2,7 +2,10 @@
   <div id="app">
     <router-view />
     <button @click="info.count++">
-      改变全局count{{ info.count }}
+      provide改变全局count{{ info.count }}
+    </button>
+    <button @click="click">
+      eventbus通信{{ count }}
     </button>
   </div>
 </template>
@@ -16,7 +19,8 @@ export default {
   },
   data() {
     return {
-      info: {count: 1} 
+      info: {count: 1}, // provide提供是对象的时候才能响应式，不然就是初始值
+      count: 0
     }
   },
   watch: {
@@ -36,6 +40,14 @@ export default {
         }
 
       }
+    }
+  },
+  mounted() {
+    this.$envetBus.$on('count', c => this.count = c)
+  },
+  methods: {
+    click() {
+      this.$eventBus.$emit('count', this.count+1)
     }
   }
 }
